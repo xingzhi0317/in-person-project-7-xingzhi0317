@@ -1,6 +1,6 @@
 const ErrorMessage = ({ message, onRetry }) => {
   return (
-    <div className="error-message">
+    <div className="error-message" role="alert">
       <div className="error-icon">⚠️</div>
       <h3>Oops! Something went wrong</h3>
       <p>{message || 'Failed to load projects. Please try again.'}</p>

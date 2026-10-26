@@ -6,8 +6,8 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>John Doe</h3>
-            <p>Full Stack Developer</p>
+            <h3>XINGZHI WU</h3>
+            <p>Berkeley, California · Available for part-time opportunities</p>
           </div>
 
           <div className="footer-section">
@@ -23,21 +23,16 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Connect</h4>
             <div className="social-links">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/xingzhi0317" target="_blank" rel="noopener noreferrer">
                 GitHub
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                LinkedIn
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                Twitter
-              </a>
+              <a href="mailto:xingzhi0317@berkeley.edu">Email</a>
             </div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {currentYear} John Doe. All rights reserved.</p>
+          <p>&copy; {currentYear} XINGZHI WU. All rights reserved.</p>
         </div>
       </div>
     </footer>

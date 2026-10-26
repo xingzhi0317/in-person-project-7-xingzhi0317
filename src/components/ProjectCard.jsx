@@ -1,15 +1,23 @@
-const ProjectCard = ({ project }) => {
+import { useState } from 'react';
+
+const ProjectCard = ({ project, onDelete }) => {
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  const handleDelete = async () => {
+    setIsDeleting(true);
+    await onDelete(project);
+    setIsDeleting(false);
+  };
 
   return (
     <div className="project-card">
-      <div className="project-image">
+      {project.imageUrl && <div className="project-image">
         <img src={project.imageUrl} alt={project.title} />
         {project.featured && <span className="featured-badge">Featured</span>}
-      </div>
-
-      <div className="project-content">
+      </div>}<div className="project-content">
         <h3>{project.title}</h3>
         <p>{project.description}</p>
+        {project.completed && <p>Completed: {project.completed}</p>}
 
         <div className="project-tech">
           {project.technologies?.map((tech, index) => (
@@ -28,6 +36,14 @@ const ProjectCard = ({ project }) => {
               Live Demo
             </a>
           )}
+          <button
+            type="button"
+            className="delete-btn"
+            onClick={handleDelete}
+            disabled={isDeleting}
+          >
+            {isDeleting ? 'Deleting...' : 'Delete'}
+          </button>
         </div>
       </div>
     </div>

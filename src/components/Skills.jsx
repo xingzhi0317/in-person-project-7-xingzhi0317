@@ -4,21 +4,44 @@ const Skills = () => {
   const [skills, setSkills] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // TODO: Fetch skills from API (optional challenge)
-  // For now, using hardcoded data
   useEffect(() => {
-    // Simulate API call
-    setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       setSkills([
-        { id: 1, name: 'React', level: 90, category: 'Frontend' },
-        { id: 2, name: 'JavaScript', level: 95, category: 'Frontend' },
-        { id: 3, name: 'Node.js', level: 80, category: 'Backend' },
-        { id: 4, name: 'Python', level: 75, category: 'Backend' },
-        { id: 5, name: 'MongoDB', level: 70, category: 'Database' },
-        { id: 6, name: 'PostgreSQL', level: 75, category: 'Database' },
-      ]);
+  {
+    "id": 1,
+    "name": "I know how to cook traditional dishes",
+    "category": "Cooking",
+    "level": 92
+  },
+  {
+    "id": 2,
+    "name": "I am good at playing basketball",
+    "category": "Sports",
+    "level": 95
+  },
+  {
+    "id": 3,
+    "name": "I can earn money through various means",
+    "category": "Life",
+    "level": 88
+  },
+  {
+    "id": 4,
+    "name": "I can play the guitar",
+    "category": "Music",
+    "level": 85
+  },
+  {
+    "id": 5,
+    "name": "I am good at coding",
+    "category": "Programming",
+    "level": 80
+  }
+]);
       setLoading(false);
     }, 500);
+
+    return () => clearTimeout(timeoutId);
   }, []);
 
   if (loading) {
@@ -35,7 +58,7 @@ const Skills = () => {
   return (
     <section id="skills" className="skills">
       <div className="container">
-        <h2>My Skills</h2>
+        <h2>Skills & Interests</h2>
         <div className="skills-grid">
           {skills.map(skill => (
             <div key={skill.id} className="skill-item">

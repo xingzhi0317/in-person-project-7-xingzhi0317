@@ -77,9 +77,14 @@ const Contact = () => {
       <div className="container">
         <h2>Get In Touch</h2>
         <p className="contact-intro">
-          Have a project in mind? Let's work together to bring your ideas to life.
+          I'm always interested in hearing about new opportunities and projects. Feel free to reach out!
         </p>
 
+        <p className="contact-intro">Berkeley, California · Available for part-time opportunities<br />
+          <a href="mailto:xingzhi0317@berkeley.edu">xingzhi0317@berkeley.edu</a><br />
+          <a href="tel:+15102292993">(510) 229-2993</a>
+        </p>
+        <p className="contact-intro">This form is a demo. To contact me, please use the email link above.</p>
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-group">
             <label htmlFor="name">Name</label>
@@ -133,7 +138,7 @@ const Contact = () => {
 
           {submitSuccess && (
             <div className="success-message">
-              Thank you for your message! I'll get back to you soon.
+              Demo validation successful. No message was sent; please use the email link to contact me.
             </div>
           )}
         </form>
